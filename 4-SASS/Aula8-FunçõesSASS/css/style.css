@@ -1,0 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.title {
+  height: 100vh;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

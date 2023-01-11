@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: darkgray;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.Header {
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.itens {
+  flex: 1 0 auto;
+  background-color: darkgray;
+  padding: 10px 10px;
+  display: grid;
+  gap: 10px 10px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:
+    "Caixa1 Caixa2 Caixa3"
+    "Caixa4 Caixa4 Caixa4"
+    "Caixa5 Caixa5 Caixa6";
+}
+
+.Item {
+  border: 2px solid black;
+  background-color: white;
+  font-size: 20px;
+}
+
+.Footer {
+  padding: 10px;
+  background-color: white;
+  border: 2px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#Item1 {
+  grid-area: Caixa1;
+  min-width: 250px;
+}
+#Item2 {
+  grid-area: Caixa2;
+  min-width: 250px;
+}
+#Item3 {
+  grid-area: Caixa3;
+  min-width: 250px;
+}
+#Item4 {
+  grid-area: Caixa4;
+}
+#Item5 {
+  grid-area: Caixa5;
+  min-width: 350px;
+}
+#Item6 {
+  grid-area: Caixa6;
+  min-width: 250px;
+}
+
+@media (max-width: 780px) {
+  .itens {
+    grid-template-areas:
+      "Caixa1 Caixa1 Caixa1"
+      "Caixa2 Caixa2 Caixa2"
+      "Caixa3 Caixa3 Caixa3"
+      "Caixa4 Caixa4 Caixa4"
+      "Caixa5 Caixa5 Caixa6";
+  }
+}
+
+@media (max-width: 630px) {
+  .itens {
+    grid-template-areas:
+      "Caixa1 Caixa1 Caixa1"
+      "Caixa2 Caixa2 Caixa2"
+      "Caixa3 Caixa3 Caixa3"
+      "Caixa4 Caixa4 Caixa4"
+      "Caixa5 Caixa5 Caixa5"
+      "Caixa6 Caixa6 Caixa6";
+  }
+}
+
+@media (max-width: 630px) {
+  #Item5 {
+    min-width: auto;
+  }
+}

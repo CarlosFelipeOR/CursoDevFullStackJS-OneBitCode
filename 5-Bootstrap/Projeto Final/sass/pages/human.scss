@@ -1,0 +1,132 @@
+.tela {
+  &.tela6 {
+    background-image: url(../../images/humanFlight/1.jpg);
+  }
+  &.tela7 {
+    background-image: url(../../images/humanFlight/02.jpg);
+  }
+
+  &.tela8 {
+    background-image: url(../../images/humanFlight/03.jpg);
+  }
+
+  &.tela9 {
+    background-image: url(../../images/humanFlight/04.jpg);
+  }
+
+  &.tela10 {
+    background-image: url(../../images/humanFlight/05.jpg);
+  }
+
+  &.tela11 {
+    background-color: black;
+    padding-top: 25%;
+    p {
+      font-size: 18px;
+      font-weight: 400;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+      &:hover {
+        color: $color-hoover;
+      }
+    }
+  }
+}
+
+.tela6 {
+  .titlepadding-home {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .big-title-home {
+    font-size: 120px;
+    padding-bottom: 30px;
+  }
+
+  .medium-text-home {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+}
+
+.tela6-1 {
+  background-color: black;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  .tela6-1-1 {
+    width: 900px;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.title1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+.title2 {
+  font-weight: 300;
+  margin-bottom: 40px;
+  word-wrap: break-word;
+}
+
+.right-content {
+  margin-left: 55%;
+  padding-top: 15%;
+  width: auto;
+}
+
+.left-content {
+  margin-left: 5%;
+  padding-top: 15%;
+  width: auto;
+}
+
+@media (max-width: 1020px) {
+  .tela6 {
+    .big-title-home {
+      font-size: 60px;
+      padding-bottom: 30px;
+    }
+
+    .medium-text-home {
+      font-size: 25px;
+      margin-bottom: 30px;
+    }
+  }
+
+  .title1 {
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .title2 {
+    font-weight: 300;
+    margin-bottom: 30px;
+    word-wrap: break-word;
+  }
+}
+
+@media (max-width: 600px) {
+  .right-content {
+    margin-left: 5%;
+    padding-top: 15%;
+    width: auto;
+  }
+
+  .tela6-1 {
+    font-size: 14px;
+  }
+}

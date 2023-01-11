@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+}
+
+.Buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.ButtonHeader {
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  background-color: #222;
+  border-color: #222;
+  cursor: pointer;
+}
+
+.MainContent {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(auto, auto);
+  grid-template-areas: "Item1 Item1 Item1 Item1" "Item2 Item2 Item2 Item2" "Item3 Item3 Item3 Item4";
+}
+
+#LogoOne {
+  height: 50px;
+}
+
+#Title {
+  display: flex;
+  justify-content: center;
+  align-items: Center;
+  font-size: 30px;
+  font-weight: 520;
+  grid-area: Item1;
+  padding: 10px 0px 0px 0px;
+}
+
+#Subtitle {
+  display: flex;
+  justify-content: center;
+  align-items: Center;
+  font-size: 20px;
+  grid-area: Item2;
+  padding: 0px 0px 30px 0px;
+}
+
+#MainCategory {
+  grid-area: Item3;
+  padding: 0px 20px 20px 100px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+#ExtraCategory {
+  grid-area: Item4;
+  background-color: #222;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: white;
+  padding: 0px 20px 20px 20px;
+}
+
+.Box2 {
+  /* border: 1px solid red; */
+  border-radius: 10px;
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.Box2:hover {
+  transition: 0.5s;
+  border: 2px solid black;
+}
+
+.Box3 {
+  /* border: 1px solid green; */
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.Box3:hover {
+  transition: 1s;
+  border: 2px solid white;
+}
+
+.TitleEsporte {
+  padding: 5px;
+  align-self: center;
+}
+
+.Esportes {
+  width: auto;
+  height: 200px;
+  border-radius: 10px;
+}
+
+.EsportesExtras {
+  width: auto;
+  height: 170px;
+  border-radius: 10px;
+}
+
+.footer {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #222;
+  font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  padding: 10px;
+}
+
+@media (max-width: 780px) {
+  .MainContent {
+    grid-template-areas: "Item1 Item1 Item1 Item1" "Item2 Item2 Item2 Item2" "Item3 Item3 Item3 Item3" "Item4 Item4 Item4 Item4";
+  }
+  #MainCategory {
+    justify-content: center;
+    padding: 0px 20px 20px 20px;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    flex-direction: column;
+  }
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .ButtonHome {
+    align-self: center;
+  }
+}

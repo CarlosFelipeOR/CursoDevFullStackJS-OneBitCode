@@ -1,0 +1,40 @@
+.tela {
+  &.tela1 {
+    background-image: url(../../images/home/01.jpg);
+  }
+
+  &.tela2 {
+    background-image: url(../../images/home/03.jpg);
+  }
+
+  &.tela3 {
+    background-image: url(../../images/home/02.gif);
+  }
+
+  &.tela4 {
+    background-image: url(../../images/home/04.jpg);
+  }
+}
+
+.titlepadding {
+  padding-top: 250px;
+
+  .shorttitle,
+  .mediumtitle {
+    width: 550px;
+    @media (max-width: 800px) {
+      width: auto;
+    }
+  }
+
+  .mediumtitle {
+    width: 650px;
+    @media (max-width: 800px) {
+      width: auto;
+    }
+  }
+}
+
+#button {
+  padding: $padding-button;
+}

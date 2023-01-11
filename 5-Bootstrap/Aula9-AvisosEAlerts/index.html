@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>Instalação Bootstrap</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="alert alert-danger text-center mt-4" role="alert">
+        Um simples alerta danger. Olha só!
+      </div>
+    </div>
+    <div id="liveAlertPlaceholder">
+      Teste agora o botão de alert: (com scrip JavaScript)
+    </div>
+    <button type="button" class="btn btn-primary" id="liveAlertBtn">
+      Show live alert
+    </button>
+
+    <!-- JavaScript Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Script BTN alert -->
+    <script>
+      var alertPlaceholder = document.getElementById("liveAlertPlaceholder");
+      var alertTrigger = document.getElementById("liveAlertBtn");
+
+      function alert(message, type) {
+        var wrapper = document.createElement("div");
+        wrapper.innerHTML =
+          '<div class="alert alert-' +
+          type +
+          ' alert-dismissible" role="alert">' +
+          message +
+          '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
+
+        alertPlaceholder.append(wrapper);
+      }
+
+      if (alertTrigger) {
+        alertTrigger.addEventListener("click", function () {
+          alert("Nice, you triggered this alert message!", "success");
+        });
+      }
+    </script>
+  </body>
+</html>
